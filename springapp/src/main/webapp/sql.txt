@@ -1,0 +1,9 @@
+private static final String logueo = 
+	            "SELECT count(*) FROM cuenta where contrasena=? and usuario=?"; 
+	            
+	
+	    private static final String cuentas = "SELECT C.id, C.usuario,"
+				+ " C.contrasena, C.cuentaActiva, P.nombre, "
+				+ "P.fechaNacimiento, P.sexo, R.nombre, R.descripcion"
+				+ " FROM cuenta C, persona P, perfil R where "
+				+ "C.persona_id=P.id and C.perfil_id=R.id group by C.id order by C.id";
